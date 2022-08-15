@@ -12,3 +12,11 @@ spark.sql("show partitions my_table").show()
 spark.sql("alter table my_table drop partition (dt='20220430')")
 spark.sql("drop table my_table")
 ```
+
+
+Download AWS/Hadoop libs for Spark to read/write to S3:
+```
+mvn org.apache.maven.plugins:maven-dependency-plugin:3.3.0:get -Dartifact=org.apache.hadoop:hadoop-common:3.3.0
+mvn org.apache.maven.plugins:maven-dependency-plugin:3.3.0:get -Dartifact=org.apache.hadoop:hadoop-client:3.3.0
+mvn org.apache.maven.plugins:maven-dependency-plugin:3.3.0:get -Dartifact=org.apache.hadoop:hadoop-aws:3.3.0
+```
