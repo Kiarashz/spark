@@ -13,6 +13,11 @@ spark.sql("alter table my_table drop partition (dt='20220430')")
 spark.sql("drop table my_table")
 ```
 
+Athena Query:
+```
+select * from "table_name$partitions" order by year desc
+```
+
 
 Download AWS/Hadoop libs for Spark to read/write to S3:
 ```
