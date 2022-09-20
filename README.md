@@ -25,3 +25,9 @@ mvn org.apache.maven.plugins:maven-dependency-plugin:3.3.0:get -Dartifact=org.ap
 mvn org.apache.maven.plugins:maven-dependency-plugin:3.3.0:get -Dartifact=org.apache.hadoop:hadoop-client:3.3.0
 mvn org.apache.maven.plugins:maven-dependency-plugin:3.3.0:get -Dartifact=org.apache.hadoop:hadoop-aws:3.3.0
 ```
+
+
+Query partitons of a table:
+```
+SELECT * FROM "my_table$partitions" ORDER BY partition_name desc
+```
