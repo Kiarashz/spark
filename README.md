@@ -31,3 +31,11 @@ Query partitons of a table:
 ```
 SELECT * FROM "my_table$partitions" ORDER BY partition_name desc
 ```
+
+AWS EMR Images
+https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/docker-custom-images-steps.html
+
+```
+aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 038297999601.dkr.ecr.ap-southeast-2.amazonaws.com
+docker pull 038297999601.dkr.ecr.ap-southeast-2.amazonaws.com/spark/emr-6.6.0
+```
